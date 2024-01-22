@@ -1,0 +1,777 @@
+/*#region page*/
+body {
+  margin: 0;
+  color: #434455; /*цвет букаф*/
+  background-color: #ffffff; /*цвет фона*/
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400; /*font-weight встановлює товщину шрифта.*/
+  font-size: 16px;
+  line-height: 1.5; /*line-height рівномірне масштабування інтервалу між рядками при зміні розміру тексту, тут множитель */
+  letter-spacing: 2%; /*letter-spacing визначає інтервал між символами в межах елемента.*/
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block; /*убрать нижний отступ у всех изо в проєкте, сделать картинку блоковой*/
+  max-width: 100%; /* Зображення буде автоматично підлаштовуватися під ширину батьківського елемента. */
+}
+
+.container /*обернуть елементы в блок*/ {
+  max-width: 100%;
+  max-width: 1158px; /*задать ширину*/
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+li {
+  list-style: none;
+}
+ul {
+  /*сбросить отступы и стили у всех ссылок*/
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  /*сбросить отступы у всех h1,2 и общие паметры*/
+  font-weight: 700;
+  text-align: center; /*поставить заголовок по центру*/
+  letter-spacing: 0.02em; /*letter-spacing визначає інтервал між символами в межах елемента.*/
+  margin: 0;
+}
+
+.page-nav {
+  display: flex;
+  gap: 40px;
+}
+
+.titletwo {
+  /*сбросить отступы у всех h2*/
+  color: #2e2f42;
+  font-size: 36px;
+  line-height: 1.11;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.titlethree {
+  /*сбросить отступы у всех h3*/
+  color: #2e2f42;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em; /*letter-spacing визначає інтервал між символами в межах елемента.*/
+  margin: 0;
+}
+
+.paragraph {
+  /*сбросить отступы у всех p*/
+  color: #434455;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+/*#endregion*/
+/*#region header*/
+.page-header {
+  border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.colortext {
+  color: #2e2f42;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu-item {
+  display: flex;
+  gap: 40px;
+}
+
+.link {
+  color: #2e2f42;
+  font-size: 16px;
+  line-height: 1.5; /*line-height рівномірне масштабування інтервалу між рядками при зміні розміру тексту, тут множитель */
+  font-weight: 500; /*font-weight встановлює товщину шрифта.*/
+  padding: 24px 0;
+  letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link_li {
+  padding: 24px 0;
+}
+
+.logo {
+  margin-right: 76px;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: #4d5ae5;
+}
+
+.link:hover {
+  /*смена цвета при наведении*/
+  color: #404bbf;
+}
+
+.link:focus {
+  /*смена цвета tab*/
+  color: #404bbf;
+}
+
+.link:active {
+  /*смена при клике*/
+  color: #404bbf;
+}
+
+.contacts-list {
+  display: flex;
+  gap: 40px;
+}
+
+.contacts-link {
+  color: #434455;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-list .contacts-link:hover {
+  color: #404bbf;
+}
+
+.contacts-list .contacts-link:focus {
+  color: #404bbf;
+}
+
+.contacts-list .contacts-link:active {
+  color: #404bbf;
+}
+
+.contacts-menu {
+  font-style: normal;
+  margin-left: auto;
+}
+
+.underliningmenu {
+  position: relative;
+  color: #404bbf;
+}
+.underliningmenu:after {
+  position: absolute;
+  width: 100%; /*занимает 100% ширины родительского элемента, */
+  background-color: #404bbf;
+  content: ''; /*не задается контент*/
+  left: 0;
+  bottom: -1px; /*находится внизу на 1 пиксель от нижнего края родительского элемента*/
+  height: 4px; /*имеет высоту 4 пиксел*/
+  border-radius: 2px;
+}
+
+/*#endregion*/
+
+/* #region section1 */
+.sectionone {
+  max-width: 1440px;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg); /*затемнение, градиент пишется первым поскольку накрывает*/
+  background-size: cover; /*щоб фонове зображення не розтягувалося*/
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 188px;
+  padding-bottom: 188px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 496px; /*br можно не задавать если поставить макс ширину будет перенос строки*/
+  color: #ffffff;
+  font-size: 56px;
+  line-height: 1.07;
+}
+
+.button {
+  margin: 0 auto; /*можливості центрувати кнопку через властивість margin*/
+  display: block; /*display: block; для можливості центрувати кнопку через властивість margin*/
+  padding: 16px 32px; /* Задайте необходимые отступы вокруг текста кнопки */
+  cursor: pointer; /*для визначення типу курсору на кнопці*/
+  border-radius: 4px; /*для визначення заокруглень у кнопки*/
+  font-size: 16px;
+  min-width: 169px; /*для визначення мінімальної ширини кнопки*/
+  height: 56px; /*для визначення висоти кнопки*/
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  background-color: #4d5ae5;
+  font-size: 16px;
+  letter-spacing: 0.04em; /*letter-spacing визначає інтервал між символами в межах елемента.*/
+  line-height: 1.5; /*line-height рівномірне масштабування інтервалу між рядками при зміні розміру тексту, тут множитель */
+  font-weight: 500; /*font-weight встановлює товщину шрифта.*/
+  border: none;
+
+  margin-top: 48px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:hover {
+  /*смена цвета при наведении*/
+  background-color: #404bbf;
+}
+
+.button:focus {
+  /*смена цвета tab*/
+  background-color: #404bbf;
+}
+
+/*#endregion*/
+/* #region section2 */
+.sectiontwo {
+  padding: 120px 0;
+}
+
+.icon {
+  height: 112px; /*высота задана потому что ето декоративный елемент внутри которого иконки разные размеров оптимальный способ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4fd;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.sectiontwo .page-nav {
+  gap: 24px;
+}
+
+.sectiontwo .titlethree {
+  margin-bottom: 8px;
+}
+
+.menu-item-sectiontwo {
+  width: calc((100% - 72px) / 4);
+}
+
+/*#endregion*/
+
+/* #region section3 */
+
+.sectionthree {
+  padding: 120px 0;
+  background-color: #f4f4fd;
+}
+
+.sectionthree .titletwo {
+  margin-bottom: 72px;
+}
+
+.sectionthree img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.liclass img {
+  width: 100%;
+}
+
+.sectionthree .page-nav {
+  gap: 24px;
+}
+
+.containerworker {
+  padding: 32px 0;
+}
+
+.sectionthree .titlethree {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.sectionthree .paragraph {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.liclass {
+  width: calc((100% - 72px) / 4);
+  border-radius: 0px 0px 4px 4px; /*закругление рамок снизу елементам*/
+  background-color: #ffffff;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08); /*добавим тени к елементам*/
+}
+.linksocial {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.sociallink {
+  width: 40px;
+  height: 40px;
+}
+
+.linksociallink {
+  display: flex;
+  width: 100%; /* встановлює ширину елемента на 100% ширини батьківського контейнера*/
+  height: 100%; /* встановлює висоту елемента на 100% ширини батьківського контейнера*/
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.linksociallink:hover {
+  background-color: #404bbf;
+}
+.linksociallink:focus {
+  background-color: #404bbf;
+}
+
+.svg {
+  fill: #f4f4fd; /*змінна зі значенням #f4f4fd для визначення кольору іконки*/
+}
+
+/*#endregion*/
+
+/* #region section4 */
+
+.sectionfour .page-nav {
+  flex-wrap: wrap;
+  justify-content: center; /* Центрирование по горизонтали */
+  column-gap: 24px;
+  row-gap: 48px;
+}
+
+.border {
+  width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.containerapp {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+
+.sectionfour {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.sectionfour .titlethree {
+  margin-bottom: 8px;
+}
+
+.sectionfour .titletwo {
+  margin-bottom: 72px;
+}
+
+.portfolio_text_wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio_cover_text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px 32px;
+  background-color: #4d5ae5;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #f4f4fd;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.border:hover .portfolio_cover_text {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transform: translateY(0);
+}
+.border:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+/*#endregion*/
+
+/*#region footer*/
+.footer {
+  padding: 100px 0;
+  background-color: #2e2f42;
+}
+
+.footer .logo {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.footer .colortext {
+  color: #f4f4fd;
+}
+
+.footer .paragraph {
+  width: 264px;
+  color: #f4f4fd;
+}
+
+.container-footer {
+  display: flex;
+  align-items: baseline; /*встановлює вирівнювання елементів у поперечному напрямку вздовж головної осі контейнера відносно базової лінії тексту першого рядка кожного елемента*/
+}
+
+.linkssocialfooter {
+  display: flex;
+  gap: 16px;
+}
+
+.itemlinkfooter {
+  width: 40px;
+  height: 40px;
+}
+
+.linksociallinkfooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.linksociallinkfooter:hover {
+  background-color: #31d0aa;
+}
+.linksociallinkfooter:focus {
+  background-color: #31d0aa;
+}
+.svgiconfooter {
+  fill: #f4f4fd;
+}
+.info-footer {
+  margin-right: 120px;
+}
+.media-p {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+.subscribe {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+.subscribebtn {
+  min-width: 165px;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  background-color: #4d5ae5;
+  padding: 8px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  gap: 16px;
+  cursor: pointer;
+}
+.subscribediv {
+  margin-left: 80px;
+}
+.footer-form {
+  display: flex;
+  gap: 24px;
+  height: 40px;
+  margin-top: 16px;
+}
+.footer-input {
+  background-color: transparent;
+  width: 264px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  padding-top: 8px;
+}
+.iconformfoot {
+  fill: #ffffff;
+  margin-left: 16px;
+}
+/*#endregion*/
+/*#region modal*/
+.backdrop {
+  width: 100%; /*ханимает всю область*/
+  height: 100%; /*ханимает всю область*/
+  position: fixed; /*бекдроп при скрили всегда будет на месте*/
+  top: 0; /*прибитий до верху*/
+  background-color: rgba(46, 47, 66, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); /*для плавної зміни прозорості і видимості елемента*/
+}
+
+.modal {
+  width: 408px;
+  min-height: 584px; /*минимальная высота 584 может растянуться больше не меньше*/
+  border-radius: 4px;
+  background-color: #fcfcfc;
+  position: absolute; /*абослют работает относительно любого еленмента не статик(position .backdrop)*/
+  top: 50%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /*посунути вліво на половину себе і вверх на половину себе*/
+  padding: 72px 24px 24px 24px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2); /*для визначення тіні для елемента*/
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); /*що дозволяє задавати анімаційний ефект для зміни значень властивостей стилю*/
+}
+.modal-field {
+  margin-bottom: 8px;
+}
+.modal-field-fix{
+    margin-bottom: 16px;
+}
+.modal-close-btn {
+  position: absolute; /*становлює позиції елемента відносно його батьківського елемента*/
+  top: 24px; /* для визначення відстані від верхнього краю батьківського елементу до верхнього краю кнопки*/
+  right: 24px; /* для визначення відстані від правого краю батьківського елементу до правого краю кнопки*/
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #e7e9fc;
+  border-radius: 50%;
+  padding: 0; /* для обнулення дефолтних відступів, які елемент має від браузера*/
+  display: flex; /*делает все елементі не вітянутіми*/
+  align-items: center; /*для вирівнювання дочірнього елемента по вертикалі*/
+  justify-content: center; /*для вирівнювання дочірнього елемента по горизонталі*/
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-icon-close {
+  position: absolute;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-btn:hover {
+  background-color: #404bbf;
+  border: none;
+}
+
+.modal-close-btn:focus {
+  background-color: #404bbf;
+  border: none;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  fill: #ffff;
+}
+
+.modal-icon-input {
+  fill: #2e2f42;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); /* для плавної зміни кольору*/
+}
+
+.modal-input:hover + .modal-icon-input {
+  fill: #4d5ae5;
+}
+.modal-input:hover {
+  border-color: #4d5ae5;
+}
+.modal-input:focus {
+  border-color: #4d5ae5;
+}
+.modal-input:focus + .modal-icon-input {
+  fill: #4d5ae5;
+}
+.modal-title {
+  text-align: center;
+  margin-bottom: 16px;
+  color: #2e2f42;
+  font-size: 16px;
+  line-height: 1.5; /*line-height рівномірне масштабування інтервалу між рядками при зміні розміру тексту, тут множитель */
+  font-weight: 500; /*font-weight встановлює товщину шрифта.*/
+  letter-spacing: 0.02em;
+}
+.modal-input-wrap {
+  position: relative;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  background-color: transparent; /* задает прозрачный цвет фона*/
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-left: 38px; /*отсуп слева для введенного текста*/
+}
+.modal-label {
+  display: block; /*label це рядковий елемент тому якщо не зробити його блоковим marginbottom не буде працювати*/
+  margin-bottom: 4px;
+  color: #8e8f99;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+}
+
+.blok-comment {
+  width: 100%;
+  height: 120px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  resize: none; /*для заборони зміни розміру елемента*/
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  padding: 8px 16px; /*отступы ввода текста*/
+  outline: transparent; /*для встановлення стилю контуру для елемента*/
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /*що дозволяє задавати анімаційний ефект для зміни значень властивостей стилю*/
+}
+.blok-comment:focus {
+  border-color: #4d5ae5;
+}
+.blok-comment::placeholder {
+  color: rgba(46, 47, 66, 0.4); /*задать прозрачность*/
+}
+.chekbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  margin-right: 8px;
+  display: inline-flex; /*в одну линию*/
+  justify-content: center;
+  align-items: center;
+  fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.priv_pol {
+  color: #4d5ae5;
+}
+.modal-btn {
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4d5ae5;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 24px;
+  padding: 16px 32px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.accept-block {
+  margin-bottom: 24px;
+}
+.accept-input:checked + label span {
+  fill: #f4f4fd;
+  background-color: #404bbf;
+  border: none;
+}
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+/*#endregion*/
