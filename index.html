@@ -213,6 +213,10 @@
           <ul class="page-nav">
             <li class="liclass">
               <img
+                srcset="
+                  ./images/Mark_Guerrero.jpg    1x,
+                  ./images/Mark-Guerrero-2x.jpg 2x
+                "
                 src="./images/Mark_Guerrero.jpg"
                 alt="Mark Guerrero"
                 width="264"
@@ -253,7 +257,12 @@
               </div>
             </li>
             <li class="liclass">
-              <img src="./images/Tom_Ford.jpg" alt="Tom Ford" width="264" />
+              <img
+                srcset="./images/Tom_Ford.jpg 1x, ./images/Tom-Ford-2x.jpg 2x"
+                src="./images/Tom_Ford.jpg"
+                alt="Tom Ford"
+                width="264"
+              />
               <div class="containerworker">
                 <h3 class="titlethree">Tom Ford</h3>
                 <p class="paragraph">Frontend Developer</p>
@@ -291,6 +300,10 @@
             </li>
             <li class="liclass">
               <img
+                srcset="
+                  ./images/Camila_Garcia.jpg,
+                  ./images/Camila-Garcia-2x.jpg 2x
+                "
                 src="./images/Camila_Garcia.jpg"
                 alt="Camila Garcia"
                 width="264"
@@ -332,6 +345,10 @@
             </li>
             <li class="liclass">
               <img
+                srcset="
+                  ./images/Daniel_Wilson.jpg,
+                  ./images/Daniel-Wilson-2x.jpg 2x
+                "
                 src="./images/Daniel_Wilson.jpg"
                 alt="Daniel Wilson"
                 width="264"
@@ -382,12 +399,34 @@
           <ul class="page-nav">
             <li class="border">
               <div class="portfolio_text_wrap">
-                <img
-                  class="item"
-                  src="./images/Banking_App.jpg"
-                  alt="Banking_App"
-                  width="360"
-                />
+                <picture
+                  ><source
+                    srcset="./images/Banking_App.jpg     1x,
+                      ./images/Banking-App-desk-2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+
+                  <source
+                    srcset="./images/Banking-App-mob.jpg    1x,
+                      ./images/Banking-App-mob-2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+
+                  <source
+                    srcset="./images/Banking-App-tab.jpg     1x,
+                      ./images/Banking-App-tab-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    class="item"
+                    src="./images/Banking_App.jpg"
+                    alt="Banking_App"
+                    width="360"
+                  />
+                </picture>
                 <p class="portfolio_cover_text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -401,12 +440,34 @@
             </li>
             <li class="border">
               <div class="portfolio_text_wrap">
+                 <picture
+                  ><source
+                    srcset="./images/Cashless_Payment.jpg     1x,
+                      ./images/Cashless-Payment-desk-2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+
+                  <source
+                    srcset="./images/Cashless Payment-mob.jpg    1x,
+                      ./images/Cashless Payment-mob-2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+
+                  <source
+                    srcset="./images/Cashless Payment-tab.jpg    1x,
+                      ./images/Cashless Payment-tab-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
                 <img
                   class="item"
                   src="./images/Cashless_Payment.jpg"
                   alt="Cashless Payment"
                   width="360"
                 />
+                </picture>
                 <p class="portfolio_cover_text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -420,12 +481,34 @@
             </li>
             <li class="border">
               <div class="portfolio_text_wrap">
+                 <picture
+                  ><source
+                    srcset="./images/Meditation_App.jpg     1x,
+                      ./images/Meditation-App-2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+
+                  <source
+                    srcset="./images/Banking-App-mob.jpg    1x,
+                      ./images/Meditation App-mob-2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+
+                  <source
+                    srcset="./images/Meditation App-tab.jpg    1x,
+                      ./images/Meditation App-tab-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
                 <img
                   class="item"
                   src="./images/Meditation_App.jpg"
                   alt="Meditation App"
                   width="360"
                 />
+                </picture>
                 <p class="portfolio_cover_text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -439,12 +522,35 @@
             </li>
             <li class="border">
               <div class="portfolio_text_wrap">
+                <picture
+                  ><source
+                    srcset="./images/Taxi_Service.jpg     1x,
+                      ./images/Taxi-Service-2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+
+                  <source
+                    srcset="./images/Taxi Service-mob.jpg    1x,
+                      ./images/Taxi Service-mob-2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+
+                  <source
+                    srcset="./images/Taxi Service-tab.jpg    1x,
+                      ./images/Taxi Service-tab-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
                 <img
                   class="item"
                   src="./images/Taxi_Service.jpg"
                   alt="Taxi Service"
                   width="360"
                 />
+                </picture>
+                
                 <p class="portfolio_cover_text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -458,12 +564,34 @@
             </li>
             <li class="border">
               <div class="portfolio_text_wrap">
+                <picture
+                  ><source
+                    srcset="./images/Screen_Illustrations.jpg     1x,
+                      ./images/Screen Illustrations-2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+
+                  <source
+                    srcset="./images/Screen Illustrations-mob.jpg    1x,
+                      ./images/Screen Illustrations-mob-2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+
+                  <source
+                    srcset="./images/Screen Illustrations-tab.jpg    1x,
+                      ./images/Screen Illustrations-tab-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
                 <img
                   class="item"
                   src="./images/Screen_Illustrations.jpg"
                   alt="Screen Illustrations"
                   width="360"
                 />
+                </picture>
                 <p class="portfolio_cover_text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -477,12 +605,34 @@
             </li>
             <li class="border">
               <div class="portfolio_text_wrap">
+                <picture
+                  ><source
+                    srcset="./images/Online_Courses.jpg     1x,
+                      ./images/Online Courses-desk-2x 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+
+                  <source
+                    srcset="./images/Online Courses-mob.jpg    1x,
+                      ./images/Online Courses-mob-2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+
+                  <source
+                    srcset="./images/Online Courses-tab.jpg    1x,
+                      ./images/Online Courses-tab-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
                 <img
                   class="item"
                   src="./images/Online_Courses.jpg"
                   alt="Online Courses"
                   width="360"
                 />
+                </picture>
                 <p class="portfolio_cover_text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -581,7 +731,8 @@
         </p>
         <form class="modal-form">
           <div class="modal-field">
-            <label for="user-name" class="modal-label">Name</label> <!-- for связываем label с input айдишником id="user-name" при клике будут вместе, каждому лейбл новій айдди   -->
+            <label for="user-name" class="modal-label">Name</label>
+            <!-- for связываем label с input айдишником id="user-name" при клике будут вместе, каждому лейбл новій айдди   -->
             <div class="modal-input-wrap">
               <input
                 type="text"
